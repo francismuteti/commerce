@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="bread-inner">
+					<ul class="bread-list">
+						<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
+						<li class="active"><a href="blog-single.html">Accounts</a></li>
+						<li class="active"><a href="blog-single.html">Registration</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Breadcrumbs -->
+<section class="shop checkout section">
+	<div class="container">
+		<div class="row"> 
+			<div class="col-lg-8 col-12">
+				<div class="checkout-form">
+					<h2>Create Your Account Here</h2>
+					<p>Please register to start shopping</p>
+					<!-- Form -->
+					<form class="form" method="post" action="">
+                        {% csrf_token %}
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-12">
+								<div class="form-group">
+									<label>First Name<span>*</span></label>
+									<input type="text" name="first_name" placeholder="" required="required">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-12">
+								<div class="form-group">
+									<label>Last Name<span>*</span></label>
+									<input type="text" name="last_name" placeholder="" required="required">
+								</div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+								<div class="form-group">
+									<label>Username<span>*</span></label>
+									<input type="text" name="username" placeholder="" required="required">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-12">
+								<div class="form-group">
+									<label>Email Address<span>*</span></label>
+									<input type="email" name="email" placeholder="" required="required">
+								</div>
+                            </div>
+                         
+                            
+					
+
+                            <div class="col-lg-6 col-md-6 col-12">
+								<div class="form-group">
+									<label>Password<span>*</span></label>
+									<input type="password" name="password1" placeholder="Password" required="required">
+								</div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+								<div class="form-group">
+									<label>Confirm Password<span>*</span></label>
+									<input type="password" name="password2" placeholder="Confirm Password" required="required">
+								</div>
+                            </div >
+                            <div class="button">
+                              <input type="submit" name='register' class="btn btn-info">
+							</div>
+                            
+						
+						</div>
+					</form>
+					<div class="col-lg-6 col-md-6 col-12">
+                        <p>Have an account?  <a href="{% url 'duka:login' %}">Login</a></p>
+                      
+                    </div>
+                
+					<!--/ End Form -->
+				</div>
+			</div>
+		
+</section>
+		<!--/ End Checkout -->
+		
+	
+
+{% endblock %}

@@ -1,0 +1,137 @@
+{% load static %}
+{% static 'img' as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ClanB</title>
+    <link href="{% static 'css/main.css'%}" rel="stylesheet">
+    <title>Invoice</title>
+</head>
+<style>
+    #tbs{
+		background-color: whitesmoke;
+	
+        color: indigo;
+		padding: 4px 4px;
+		
+	}
+	.main-hading{
+		font-size: 14px;
+		background-color: indigo;
+		color: white;
+	}
+	#top{
+		color: indigo;
+		text-shadow: 2px 2px 2px burlywood;
+		font-size: 30px;
+		font-weight: bolder;
+		font-style: italic;
+	}
+
+</style>
+<body>
+	<h1 id="top">OnyiShop</h1>
+	<div style="margin-left: 550px;">
+		<p><span style="font-weight: bold;">OnyiShop Kenya</span> <br>
+			<span class="secondary">
+			Contacts:071421473,
+			</span><br>
+			<span>Email: info@OnyiShop.com,</span><br>
+			<span>Nairobi,Kenya</span><br>
+			<span>www.OnyiShop.com</span><br>
+			<span></span><br>
+		
+		</p>
+	</div>
+    <div class="manu">
+		<div>
+			<h2>INVOICE</h2>
+			<p>Invoice no.  OnyiShop-1998{{ order.id }}<br>
+				<span class="secondary">
+				{{ order.ordered_date|date:"M d, Y" }}
+				</span><br>
+				<span>{{order.first_name}} {{order.last_name}}</span><br>
+				<span>{{order.city}}</span><br>
+				<span>{{order.email}}</span><br>
+				<span>{{order.phone}}</span>
+			</p>
+		</div>
+	
+	</div>
+	
+    	<!-- Shopping Cart -->
+	<div class="shopping-cart section">
+		<div class="container">
+			<div class="row" >
+				<div class="col-12" >
+					<!-- Shopping Summery -->
+					<table class="table shopping-summery" id="tbs">
+						<thead>
+							<tr class="main-hading">
+								<th>PRODUCT</th>
+								
+								<th class="text-center">UNIT PRICE</th>
+								<th class="text-center">QUANTITY</th>
+								<th class="text-center">SUB-TOTAL</th> 
+								
+							</tr>
+						</thead>
+						<tbody style="background-color: white;">
+							{% for item in items %}			
+							<tr>
+								<td class="product-des" data-title="Description" style="text-align: center;">
+									<p class="product-name">{{item.product.title}}</p>
+									
+								</td>
+								<td class="price" data-title="Price" style="text-align: center;"><span>Ksh {{item.price}}</span></td>
+								<td class="qty" data-title="Qty"><!-- Input Order -->
+								  <div style="text-align: center;">
+									  {{item.quantity}}
+								  </div>
+								</td>
+								<td class="total-amount" data-title="Total" style="text-align: center;"><span>Ksh {{item.amount}}</span></td>
+							</tr>
+							
+                            {% endfor %}
+						</tbody>
+					
+					</table> 
+					<table class="table shopping-summery" id="tbs">
+						
+						<tbody style="background-color: white;">
+							<tr class="main-hading">
+								<!-- <th>PRODUCT</th>
+								
+								<th class="text-center">UNIT PRICE</th>
+								<th class="text-center">QUANTITY</th>
+								<th class="text-center">TOTAL</th>  -->
+								<td class="text-center">
+									TOTAL 
+								</td>
+								<td>
+
+								</td>
+								<td style="margin-left: 100px;">
+									Ksh {{order.total_payable}}
+								</td>
+								
+								
+							</tr>
+					
+						</tbody>
+					
+					</table> 
+				
+					<!--/ End Shopping Summery -->
+				</div>
+            </div>
+           
+	</div>
+    
+</body>
+</html>

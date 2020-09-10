@@ -1,0 +1,194 @@
+{% load static %}
+{% static 'img' as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>ClanB</title>
+  <!-- Font Awesome -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+ 
+  <!-- Material Design Bootstrap -->
+  <link href="{% static 'css/main.css'%}" rel="stylesheet">
+  <link href="{% static 'css/mdb.min.css'%}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{% static 'css/style.min.css'%}" rel="stylesheet">
+  	<!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<!-- StyleSheet -->
+	
+
+	<!-- Magnific Popup -->
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.min.css'%}">
+	<!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css'%}">
+	<!-- Fancybox -->
+	<link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css'%}">
+	
+    <link rel="stylesheet" href="{% static 'css/niceselect.css'%}">
+	<!-- Animate CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+	<!-- Flex Slider CSS -->
+    <link rel="stylesheet" href="{% static 'css/flex-slider.min.css'%}">
+	<!-- Owl Carousel -->
+    <link rel="stylesheet" href="{% static 'css/owl-carousel.css'%}">
+	<!-- Slicknav -->
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css'%}">
+   
+    
+	
+	<!-- Eshop StyleSheet -->
+	<link rel="stylesheet" href="{% static 'css/reset.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
+
+  
+
+</head>
+<body class="js">
+  {% include 'nav.html' %}
+  {% block content %}
+  {% endblock %}
+</body>
+<!-- Start Footer Area -->
+<footer class="footer">
+  <!-- Footer Top -->
+  <div class="footer-top section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6 col-12">
+          <!-- Single Widget -->
+          <div class="single-footer about">
+        
+            <p class="text">Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue,  magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+            <p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">+0123 456 789</a></span></p>
+          </div>
+          <!-- End Single Widget -->
+        </div>
+        <div class="col-lg-2 col-md-6 col-12">
+          <!-- Single Widget -->
+          <div class="single-footer links">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Faq</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+          <!-- End Single Widget -->
+        </div>
+        <div class="col-lg-2 col-md-6 col-12">
+          <!-- Single Widget -->
+          <div class="single-footer links">
+            <h4>Customer Service</h4>
+            <ul>
+              <li><a href="#">Payment Methods</a></li>
+              <li><a href="#">Money-back</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <!-- End Single Widget -->
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <!-- Single Widget -->
+          <div class="single-footer social">
+            <h4>Get In Tuch</h4>
+            <!-- Single Widget -->
+            <div class="contact">
+              <ul>
+                <li>NO. 342 - London Oxford Street.</li>
+                <li>012 United Kingdom.</li>
+                <li>info@onyishop.com</li>
+                <li>+254 714 212 473</li>
+              </ul>
+            </div>
+            <!-- End Single Widget -->
+            <ul>
+              <li><a href="#"><i class="ti-facebook"></i></a></li>
+              <li><a href="#"><i class="ti-twitter"></i></a></li>
+              <li><a href="#"><i class="ti-flickr"></i></a></li>
+              <li><a href="#"><i class="ti-instagram"></i></a></li>
+            </ul>
+          </div>
+          <!-- End Single Widget -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer Top -->
+  <div class="copyright">
+    <div class="container">
+      <div class="inner">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <div class="left">
+              <p>Copyright © 2020 <a href="http://www.ClanX.com" target="_blank">ClanX</a>  -  All Rights Reserved.</p>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <!-- <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js'%}"></script> -->
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'js/popper.min.js'%}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/mdb.min.js'%}"></script>
+  <script src="{% static 'js/jquery.min.js'%}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.0.js'%}"></script>
+<script src="{% static 'js/jquery-ui.min.js'%}"></script>
+<!-- Popper JS -->
+<script src="{% static 'js/popper.min.js'%}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+>
+<script src="{% static 'js/slicknav.min.js'%}"></script>
+<!-- Owl Carousel JS -->
+<script src="{% static 'js/owl-carousel.js'%}"></script>
+<!-- Magnific Popup JS -->
+<script src="{% static 'js/magnific-popup.js'%}"></script>
+<!-- Waypoints JS -->
+<script src="{% static 'js/waypoints.min.js'%}"></script>
+<!-- Countdown JS -->
+<script src="{% static 'js/finalcountdown.min.js'%}"></script>
+<!-- Nice Select JS -->
+<script src="{% static 'js/nicesellect.js'%}"></script>
+<!-- Flex Slider JS -->
+<script src="{% static 'js/flex-slider.js'%}"></script>
+<!-- ScrollUp JS -->
+<script src="{% static 'js/scrollup.js'%}"></script>
+<!-- Onepage Nav JS -->
+<script src="{% static 'js/onepage-nav.min.js'%}"></script>
+<!-- Easing JS -->
+<script src="{% static 'js/easing.js'%}"></script>
+<!-- Active JS -->
+<script src="{% static 'js/active.js'%}"></script>
+<script src="{% static 'js/duka.js'%}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+  </script>
+</html>

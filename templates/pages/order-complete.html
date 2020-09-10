@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="bread-inner">
+					<ul class="bread-list">
+						<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
+						<li class="active"><a href="blog-single.html">Order complete</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Breadcrumbs -->
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="order-summary clearfix">
+                    <div class="section-title">
+                        <h3>Your Order has been successfully placed!</h3>
+						<div class="single-widget get-button">
+							<div class="content">
+								<div class="button">
+									<a href="{{order.get_invoice}}" class="btn" style="color: aliceblue;">Confirm</a>
+								</div>
+							</div>
+						</div>
+						
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+		<!--/ End Checkout -->
+
+		<!-- End Shop Services -->
+{% endblock %}
